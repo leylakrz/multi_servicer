@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "ba157a64-a2a5-4543-9920-efb1fb6ce4c9",
+		"name": "dade_negar",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25183222"
+	},
+	"item": [
+		{
+			"name": "first",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"provider\": \"google\",\n    \"service\": \"sms\",\n    \"arg\": \"phone_number\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/first/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"first",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "first",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"provider\": \"google\",\n    \"service\": \"sms\",\n    \"arg\": \"phone_number\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/first/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"first",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Mon, 23 Jan 2023 16:13:19 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "59"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"sms sent by GoogleProvider. args: phone_number\"\n}"
+				}
+			]
+		},
+		{
+			"name": "second",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"service\": \"email\",\n    \"arg\": \"email@email.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/second/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"second",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "second",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"service\": \"email\",\n    \"arg\": \"email@email.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/second/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"second",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Mon, 23 Jan 2023 16:13:01 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "63"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"email sent by YahooProvider. args: email@email.com\"\n}"
+				}
+			]
+		}
+	]
+}
